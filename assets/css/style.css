@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+.lego-global-header-wrap {
+  position: left;
+  display: inline;
+  overflow: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: black;
+  color: white;
+}
+body {
+  background-color: red;
+}
+li {
+  display: inline;
+}
+li a img {
+  height: 40px;
+  width: 40px;
+}
