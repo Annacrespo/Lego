@@ -1,8 +1,11 @@
 @iconHeight: 50px;
 @iconWidth: 60px;
+
 * {
     box-sizing: border-box;
 }
+
+//navbar
 .lego-global-header-wrap {
     background-color: white;
     margin: 0 auto;
@@ -18,10 +21,6 @@
     color: black;
     margin: 0 auto;
 }
-body {
-    background-color: red;
-}
-
 .lego-logo a img{
     height: @iconHeight;
     width: @iconWidth;
@@ -51,22 +50,52 @@ li {
     padding-left: 100px;
     padding-bottom: 5px;
 }
-
-.service .cust{
-    list-style-type: none;
-    display: block;
-}
-
-.footer {
-    display: inline;
-    // position: fixed;
+//footer
+@footerBackground: silver;
+@footerFontColor: gray;
+.lego-global-footer-wrap {
     left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: red;
-    color: white;
+    background-color: @footerBackground;
+    color: @footerFontColor;
+    height: 300px;
+    ul {
+        list-style-type: none;
+    }
+    li {
+        list-style-type: circle;
+    }
  }
 
-ul {
-    display: inline-block;
- }
+// .Service {
+//     width: 250px;
+//     float: left;
+//     #About #Parents #Educators #Attractions {
+//         margin: 0 auto;
+//         float: left;
+//     }
+// }
+#Customer {
+    float: left;
+}
+#About {
+    float: left;
+}
+#Parents {
+    float: left;
+}
+#Educators {
+    float: left;
+}
+#Attractions {
+    float: left;
+}
+#terms {
+    float: left;
+    display: block;
+    width: 100%;
+}
+#copyright {
+    float: left;
+    display: block;
+    width: 100%;
+}
