@@ -45,17 +45,18 @@ li a img {
   padding-bottom: 5px;
 }
 .service .cust {
-  list-style-type: none;
-  display: block;
+  list-style: square;
 }
 .footer {
   display: inline;
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: red;
   color: white;
+  text-align: center;
 }
-ul {
-  display: inline-block;
+.footer-links li {
+  display: inline;
 }
