@@ -43,38 +43,40 @@ li a img {
 }
 .lego-global-footer-wrap {
   left: 0;
-  background-color: silver;
-  color: gray;
+  background-color: #ececec;
+  color: #777472;
+  font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
   height: 300px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
 }
-.lego-global-footer-wrap ul {
-  list-style-type: none;
+.lego-global-footer-wrap a {
+  text-decoration: none;
+  color: #777472;
 }
-.lego-global-footer-wrap li {
-  list-style-type: circle;
+.lego-global-footer-wrap a h5 {
+  color: #4b88c1;
+  font-size: 14px;
 }
-#Customer {
+#Customer,
+#About,
+#Parents,
+#Educators,
+#Attractions,
+#terms,
+#copyright {
   float: left;
-}
-#About {
-  float: left;
-}
-#Parents {
-  float: left;
-}
-#Educators {
-  float: left;
-}
-#Attractions {
-  float: left;
+  font-size: 12px;
+  padding-left: 10px;
 }
 #terms {
-  float: left;
   display: block;
   width: 100%;
 }
 #copyright {
-  float: left;
   display: block;
   width: 100%;
+  color: #b2afae;
 }
