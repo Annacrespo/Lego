@@ -3,7 +3,10 @@
 }
 .lego-global-header-wrap {
   background-color: white;
-  margin: 0 auto;
+  position: absolute;
+  left: 0 ;
+  right: 0;
+  top: 0px;
 }
 .global-links {
   position: left;
@@ -48,9 +51,12 @@ li a img {
   font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   height: 300px;
-  padding-left: 100px;
+  padding-left: 100px 20px;
   padding-right: 100px;
-  padding-top: 20px;
+  position: absolute;
+  left: 0 ;
+  right: 0;
+  bottom: 0;
 }
 .lego-global-footer-wrap a {
   text-decoration: none;
@@ -59,6 +65,7 @@ li a img {
 .lego-global-footer-wrap a h5 {
   color: #4b88c1;
   font-size: 14px;
+  text-align: center;
 }
 #Customer,
 #About,
@@ -79,4 +86,25 @@ li a img {
   display: block;
   width: 100%;
   color: #b2afae;
+}
+.card {
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 7, 0, 0);
+  transition: 0.3s;
+  background-color: silver;
+  float: left;
+  margin: 20px;
+}
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+  margin: 20px;
+}
+body {
+  background-image: url(https://www.lego.com/r/www/r/portals/-/media/images/home/layout/take-overs/christmas/bg_skin-winter_blue.jpg?l.r=-622178962);
 }
