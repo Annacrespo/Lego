@@ -27,6 +27,10 @@
 .lego-logo a img{
     height: @iconHeight;
     width: @iconWidth;
+    border-radius: 5px;
+}
+.lego-logo a img:hover {
+    transform: scale(1.1);
 }
 li {
     display: inline;
@@ -34,6 +38,7 @@ li {
         height: @iconHeight;
         width: @iconWidth;
         padding-top: 0px;
+        border-radius: 5px;
     }
     a img:hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -196,6 +201,10 @@ h2 {
     float: left;
     margin: 30px;
     border-radius: 25px; 
+    a img {
+        width: 100%;
+        height: 200px;
+    }
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -256,7 +265,6 @@ body {
     margin-left: 245px;
     margin-right: 285px;
     width: 900px;
-    height: auto;
         #pageLinks {
             text-align: center;
             font-size: 30px;
