@@ -19,3 +19,13 @@ function topFunction() {
 less = {
     env: "development"
   };
+//responsive top navbar hamburger menu
+
+  function myFunction() {
+    var x = document.getElementById("lego-global-header-wrap");
+    if (x.className === "lego-global-header-wrap") {
+        x.className += " responsive";
+    } else {
+        x.className = "lego-global-header-wrap";
+    }
+}
