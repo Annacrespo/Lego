@@ -1,11 +1,16 @@
 @iconHeight: 50px;
 @iconWidth: 60px;
+@footerBackground: #ececec;
+@footerFontColor: #777472;
+@font: Verdana,"Helvetica Neue",Helvetica,Arial,sans-serif;
+@cardWidth: 300px;
+@cardHeight: 400px;
 
 * {
     box-sizing: border-box;
 }
 
-//navbar
+/* navbar */
 .lego-global-header-wrap {
     background-color: white;
     position: absolute; 
@@ -34,6 +39,8 @@ li {
 }
 .searchbar {
     padding-left: 100px;
+    padding-bottom: 25px;
+    display: hidden;
     input {
         height: 30px;
         font-size: 14px;
@@ -53,18 +60,19 @@ li {
     width: 110px;
     padding-left: 40px;
     padding-bottom: 5px;
+    display: hidden;
 }
-.login {
-    padding-bottom: 5px;
+.github-button {
+    padding-bottom: 15px;
 }
 #flag {
-    padding-left: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-bottom: 5px;
+    padding-top: 10px;
+    float: right;
 }
-//footer
-@footerBackground: #ececec;
-@footerFontColor: #777472;
-@font: Verdana,"Helvetica Neue",Helvetica,Arial,sans-serif;
+/* footer */
 .lego-global-footer-wrap {
     background-color: @footerBackground;
     color: @footerFontColor;
@@ -99,9 +107,7 @@ li {
     width: 100%;
     color: #b2afae;
 }
-//cards
-@cardWidth: 300px;
-@cardHeight: 400px;
+/* display cards */
 .card {
     width: @cardWidth;
     height: @cardHeight;
@@ -109,7 +115,8 @@ li {
     transition: 0.3s;
     background-color: silver;
     float: left;
-    margin: 20px;    
+    margin: 20px;
+    border-radius: 25px; 
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -135,7 +142,7 @@ body {
     padding-top: 70px;
 }
 
-//button
+/* back to top button */
 #myBtn {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
@@ -154,6 +161,7 @@ body {
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
 }
+/* page links to images */
 #imageWrapper {
     background-color: #ececec;
     margin-left: 295px;
@@ -167,5 +175,23 @@ body {
         }
         #DMimages {
             width: 1125px;
+            border-radius: 25px;
         }
+}
+.wrap {
+    min-height: calc(100vh - 300px);
+}
+/* media queries */
+@media (max-width: 980px) {
+
+}
+
+@media (max-width: 480px) {
+.footer {
+    display: none;
+}
+}
+
+@media (min-width: 481px) and (max-width: 779px) {
+
 }

@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+/* navbar */
 .lego-global-header-wrap {
   background-color: white;
   position: absolute;
@@ -31,6 +32,8 @@ li a img {
 }
 .searchbar {
   padding-left: 100px;
+  padding-bottom: 25px;
+  display: hidden;
 }
 .searchbar input {
   height: 30px;
@@ -49,14 +52,19 @@ li a img {
   width: 110px;
   padding-left: 40px;
   padding-bottom: 5px;
+  display: hidden;
 }
-.login {
-  padding-bottom: 5px;
+.github-button {
+  padding-bottom: 15px;
 }
 #flag {
-  padding-left: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: 5px;
+  padding-top: 10px;
+  float: right;
 }
+/* footer */
 .lego-global-footer-wrap {
   background-color: #ececec;
   color: #777472;
@@ -99,6 +107,7 @@ li a img {
   width: 100%;
   color: #b2afae;
 }
+/* display cards */
 .card {
   width: 300px;
   height: 400px;
@@ -107,6 +116,7 @@ li a img {
   background-color: silver;
   float: left;
   margin: 20px;
+  border-radius: 25px;
 }
 /* On mouse-over, add a deeper shadow */
 .card:hover {
@@ -129,6 +139,7 @@ body {
   padding-bottom: 300px;
   padding-top: 70px;
 }
+/* back to top button */
 #myBtn {
   display: none;
   /* Hidden by default */
@@ -157,6 +168,7 @@ body {
   background-color: #555;
   /* Add a dark-grey background on hover */
 }
+/* page links to images */
 #imageWrapper {
   background-color: #ececec;
   margin-left: 295px;
@@ -171,4 +183,14 @@ body {
 }
 #imageWrapper #DMimages {
   width: 1125px;
+  border-radius: 25px;
+}
+.wrap {
+  min-height: calc(-200vh);
+}
+/* media queries */
+@media (max-width: 480px) {
+  .footer {
+    display: none;
+  }
 }
