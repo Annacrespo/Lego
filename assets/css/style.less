@@ -23,6 +23,7 @@
     color: black;
     margin: 0 auto;
 }
+
 .lego-logo a img{
     height: @iconHeight;
     width: @iconWidth;
@@ -33,6 +34,11 @@ li {
         height: @iconHeight;
         width: @iconWidth;
         padding-top: 0px;
+    }
+    a img:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        transition: all .2s ease-in-out;
+        transform: scale(1.1);
     }
 }
 .searchbar {
@@ -69,6 +75,13 @@ li {
     padding-bottom: 5px;
     padding-top: 10px;
     float: right;
+}
+.carousel-wrapper {
+    img {
+        height: 400px;
+        margin-top: -25px;
+        margin-left: -50px;
+    }
 }
 /* footer */
 .lego-global-footer-wrap {
@@ -109,7 +122,71 @@ li {
     color: #b2afae;
     margin-left: 75px;
 }
+
+/* carousel */
+
+.carousel-wrapper {
+    position: relative;
+
+    .carousel-item {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 25px 50px;
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+      border: 1px solid #aaa;
+      .arrow {
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 50px;
+      height: 100%;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+    //   background: url("http://haloxp.com/codepen/carousel-arrow-dark.png") 50% 50% / 20px no-repeat;
+        &.arrow-prev {
+          left: 0;
+        }
+        &.arrow-next {
+          right: 0;
+          -webkit-transform: rotate(180deg);
+                  transform: rotate(180deg);
+        }
+      }
+      &.light {
+        color: white;
+  
+        .arrow {
+        //   background: url("http://haloxp.com/codepen/carousel-arrow-light.png") 50% 50% / 20px no-repeat;
+        }
+      }
+    }
+    [id^="target-item"] {
+      display: none;
+    }
+    .item-1 {
+      z-index: 2;
+      opacity: 1;
+    }
+    *:target ~ .item-1 {
+      opacity: 0;
+    }
+    #target-item-1:target ~ .item-1 {
+      opacity: 1;
+    }
+    #target-item-2:target ~ .item-2, #target-item-3:target ~ .item-3 {
+      z-index: 3;
+      opacity: 1;
+    }
+  }
 /* display cards */
+h2 {
+    padding-top: 20px;
+    font-size: 25px;
+    text-align: center;
+}
 .card {
     width: 300px;
     height: 400px;
@@ -124,6 +201,8 @@ li {
 /* On mouse-over, add a deeper shadow */
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: all .2s ease-in-out;
+    transform: scale(1.1);
 }
 .wrap {
     background-color: white;
@@ -184,10 +263,10 @@ body {
             background-color: #ececec;
             padding-top: 15px;
             padding-bottom: 10px;
+            border-radius: 25px;
         }
         #DMimages {
             width: 1125px;
-            border-radius: 25px;
             margin-left: 25px;
             margin-bottom: 40px;
         }
@@ -207,6 +286,13 @@ body {
     }
     .global-links {
         padding-left: 10px;
+    }
+    .carousel-item {
+        padding-top: 50px;
+        img {
+            width: 800px;
+            height: 400px;
+        }
     }
     .footer {
         display: none;
@@ -247,6 +333,14 @@ body {
     .icon {
         display: none;
     }
+    .carousel-item {
+        padding-top: 50px;
+        height: 250px;
+        img {
+            width: 480px;
+            height: 250px;
+        }
+    }
     .footer  {
     display: none;
     }
@@ -261,6 +355,7 @@ body {
         margin: 0;
         display: vertical;
     }
+
     #imageWrapper {
         margin-left: 0px;
         margin-right: 0px;
@@ -286,4 +381,15 @@ body {
         margin: 50px;
         display: block;
     }
+    .arrow, &.light .arrow {
+        background-size: 10px;
+        background-position: 10px 50%;
+      }
+      h2 {
+        padding-top: 5px;
+        font-size: 20px;
+        margin-left: 150px;
+        color: white;
+    }
+    
 }

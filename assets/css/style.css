@@ -30,6 +30,11 @@ li a img {
   width: 60px;
   padding-top: 0px;
 }
+li a img:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+}
 .searchbar {
   padding-left: 100px;
   padding-bottom: 25px;
@@ -63,6 +68,11 @@ li a img {
   padding-bottom: 5px;
   padding-top: 10px;
   float: right;
+}
+.carousel-wrapper img {
+  height: 400px;
+  margin-top: -25px;
+  margin-left: -50px;
 }
 /* footer */
 .lego-global-footer-wrap {
@@ -111,7 +121,64 @@ li a img {
   color: #b2afae;
   margin-left: 75px;
 }
+/* carousel */
+.carousel-wrapper {
+  position: relative;
+}
+.carousel-wrapper .carousel-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 50px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  border: 1px solid #aaa;
+}
+.carousel-wrapper .carousel-item .arrow {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 50px;
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.carousel-wrapper .carousel-item .arrow.arrow-prev {
+  left: 0;
+}
+.carousel-wrapper .carousel-item .arrow.arrow-next {
+  right: 0;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.carousel-wrapper .carousel-item.light {
+  color: white;
+}
+.carousel-wrapper [id^="target-item"] {
+  display: none;
+}
+.carousel-wrapper .item-1 {
+  z-index: 2;
+  opacity: 1;
+}
+.carousel-wrapper *:target ~ .item-1 {
+  opacity: 0;
+}
+.carousel-wrapper #target-item-1:target ~ .item-1 {
+  opacity: 1;
+}
+.carousel-wrapper #target-item-2:target ~ .item-2,
+.carousel-wrapper #target-item-3:target ~ .item-3 {
+  z-index: 3;
+  opacity: 1;
+}
 /* display cards */
+h2 {
+  padding-top: 20px;
+  font-size: 25px;
+  text-align: center;
+}
 .card {
   width: 300px;
   height: 400px;
@@ -125,6 +192,8 @@ li a img {
 /* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
 }
 .wrap {
   background-color: white;
@@ -194,10 +263,10 @@ body {
   background-color: #ececec;
   padding-top: 15px;
   padding-bottom: 10px;
+  border-radius: 25px;
 }
 #imageWrapper #DMimages {
   width: 1125px;
-  border-radius: 25px;
   margin-left: 25px;
   margin-bottom: 40px;
 }
@@ -211,6 +280,13 @@ body {
   }
   .global-links {
     padding-left: 10px;
+  }
+  .carousel-item {
+    padding-top: 50px;
+  }
+  .carousel-item img {
+    width: 800px;
+    height: 400px;
   }
   .footer {
     display: none;
@@ -250,6 +326,14 @@ body {
   .icon {
     display: none;
   }
+  .carousel-item {
+    padding-top: 50px;
+    height: 250px;
+  }
+  .carousel-item img {
+    width: 480px;
+    height: 250px;
+  }
   .footer {
     display: none;
   }
@@ -288,5 +372,16 @@ body {
     float: left;
     margin: 50px;
     display: block;
+  }
+  .arrow,
+  .light .arrow {
+    background-size: 10px;
+    background-position: 10px 50%;
+  }
+  h2 {
+    padding-top: 5px;
+    font-size: 20px;
+    margin-left: 150px;
+    color: white;
   }
 }
